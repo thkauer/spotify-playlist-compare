@@ -1,17 +1,15 @@
- 
-
 # Spotify playlist compare
-Script and utils to retrieve spotify playlist information and included tracks to
-enable the comparison of playlists.
+Script and utils to retrieve Spotify playlist information and included tracks to
+enable playlist comparison.
 
 Currently the `main` script compares the tracks saved by the user with the
-tracks in the playlist the user has saved, filtered by playlist author.  
-The result is a set of tracks that are contained in a playlist saved by the user,
-but are not contained in the tracks saved by the user.
+tracks in the playlist saved by the user, filtered by the playlist author.  
+The result is a set of tracks that are in a user-saved playlist but not in the 
+user-saved tracks.
 
 ## Configuration
-To interact with the spotify api, you need to specify your api credentials.
-You have the option to export the environment variables or save them in a `.env` file. 
+In order to interact with the Spotify API, you will need to provide your API credentials.
+You have the option to export the environment variables or save them to an `.env` file. 
 
 ## Usage
 ```
@@ -25,31 +23,28 @@ options:
 ```
 
 # Motivation
-If you ask yourself **"Why is this particular use case useful for somebody?"**
-or **"Why could this be possibly useful for other people?"** you have reached the right 
-chapter.
+If you ask yourself, **"Why is this particular use case useful to someone?"**
+or **"Why could this be possibly be useful for other people?"**, you have come to the 
+right chapter.
 
 And the answer:  
-**Like many people, I only want to listen to the music I enjoy... right in this**
-**moment, and the situation or mood im in.**  
-So naturally the amount of personal playlists has grown and grown over time.
-Resulting in playlists that differ completely, partially overlap or are nearly a 
+**Like many people, I only want to listen to the music I like... right in the**
+**moment, and in the situation or mood I am in.**  
+So naturally, the number of personal playlists has grown and grown over time.
+Resulting in playlists that are completely different, partially overlapping or almost a 
 complete subset of other playlists.
-But the thing with taste... it can change over time.   
-One day I realized that I have to sort out a chunk of songs I do not want to
-listen to anymore, in general, in the type of situation or the mood the playlists are 
-made for.  
-Luckily spotify also added **most of the time** songs to my "Liked Songs" while adding 
-them to the playlists they belong. So I started updating my playlists by iterating
-trough my liked songs and updating in which playlist they should occur.  
-But as highlighted in the sentence before, the songs were not always added to the "Liked 
-Songs" playlist and from time to time an old song I do not like anymore and should have
+But the thing about taste... it can and will change over time.   
+One day I realized that I needed to sort out a bunch of songs that I no longer wanted to
+listen to in the kind of situation or mood the playlists were made for.  
+Luckily Spotify also added **most of the time** songs to my "Liked Songs" while adding 
+them to the playlists they belong to. So I started updating my playlists by iterating
+through my Liked Songs and updating which playlist they should appear in.  
+But as the previous sentence indicates, the songs were not always added to the "Liked 
+Songs" playlist, and from time to time an old song that I no longer like and should have
 been filtered out would pop up.
 
-And now we found the reason for the current script. To not iterate trough each 
-playlist (with duplicated songs between playlists) manually, checking if each song is in
-the "Liked Songs" playlist.  
+And now we have found the reason for the current script. To not have to manually iterate through each playlist (with duplicate songs between playlists) to check if each song is
+in the "Liked Songs" playlist.  
 
-And finally I can listen to the music I in enjoy in the current moment without the need
-to skip every second song again.  
-... At least for one day after resorting all my songs.
+And finally I can listen to the music I like without having to skip every second song.  
+... At least for a day after resorting all of my songs.
